@@ -9,11 +9,19 @@
     "type": "git",
     "url": "git+https://github.com/crccc/cyberchef-extension.git"
   },
-  "keywords": ["chrome-extension", "cyberchef", "encoding", "decoding"],
+  "keywords": [
+    "chrome-extension",
+    "cyberchef",
+    "encoding",
+    "decoding"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/crccc/cyberchef-extension/issues"
   },
-  "homepage": "https://github.com/crccc/cyberchef-extension#readme"
+  "homepage": "https://github.com/crccc/cyberchef-extension#readme",
+  "dependencies": {
+    "crypto-js": "^4.2.0"
+  }
 }

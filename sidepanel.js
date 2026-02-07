@@ -1,6 +1,7 @@
-// Side panel JavaScript for CyberChef operations
+// Side panel JavaScript with CyberChef-compatible API
+// Using crypto-js library for cryptographic operations (loaded from crypto-js.js)
 
-// CyberChef-like operations implemented in vanilla JavaScript
+// CyberChef-compatible operations using standard libraries and crypto-js
 const CyberChefOperations = {
   base64encode: (input) => btoa(input),
   
@@ -55,27 +56,19 @@ const CyberChefOperations = {
   
   toLowerCase: (input) => input.toLowerCase(),
   
+  // Using crypto-js for hash operations (CyberChef-compatible)
   md5: async (input) => {
-    return await hashString(input, 'MD5');
+    return CryptoJS.MD5(input).toString();
   },
   
   sha1: async (input) => {
-    return await hashString(input, 'SHA-1');
+    return CryptoJS.SHA1(input).toString();
   },
   
   sha256: async (input) => {
-    return await hashString(input, 'SHA-256');
+    return CryptoJS.SHA256(input).toString();
   }
 };
-
-// Helper function for hashing
-async function hashString(input, algorithm) {
-  const encoder = new TextEncoder();
-  const data = encoder.encode(input);
-  const hashBuffer = await crypto.subtle.digest(algorithm, data);
-  const hashArray = Array.from(new Uint8Array(hashBuffer));
-  return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-}
 
 // DOM elements
 const recipeSelect = document.getElementById('recipe');
@@ -85,13 +78,15 @@ const cookBtn = document.getElementById('cookBtn');
 const inputModeRadios = document.querySelectorAll('input[name="inputMode"]');
 
 // Listen for messages from background script (context menu selection)
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-  if (message.type === 'SELECTED_TEXT') {
-    inputTextarea.value = message.text;
-    // Automatically set to context menu mode
-    document.querySelector('input[name="inputMode"][value="contextMenu"]').checked = true;
-  }
-});
+if (typeof chrome !== 'undefined' && chrome.runtime) {
+  chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    if (message.type === 'SELECTED_TEXT') {
+      inputTextarea.value = message.text;
+      // Automatically set to context menu mode
+      document.querySelector('input[name="inputMode"][value="contextMenu"]').checked = true;
+    }
+  });
+}
 
 // Cook button click handler
 cookBtn.addEventListener('click', async () => {

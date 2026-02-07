@@ -1,10 +1,11 @@
 # CyberChef Chrome Extension
 
-A Chrome extension that provides a side panel interface for using CyberChef-like operations on text content.
+A Chrome extension that provides a side panel interface for using CyberChef-compatible operations on text content.
 
 ## Features
 
 - **Side Panel Interface**: Opens a convenient side panel for text processing
+- **CyberChef-Compatible Operations**: Uses industry-standard libraries (crypto-js) for cryptographic operations
 - **Multiple Recipes**: Support for common encoding/decoding operations:
   - Base64 Encode/Decode
   - URL Encode/Decode
@@ -55,6 +56,12 @@ A Chrome extension that provides a side panel interface for using CyberChef-like
 - **MD5 Hash**: Generate MD5 hash
 - **SHA1 Hash**: Generate SHA1 hash
 - **SHA256 Hash**: Generate SHA256 hash
+
+## Technical Implementation
+
+This extension uses the **crypto-js** library to provide CyberChef-compatible cryptographic operations. The crypto-js library is a well-maintained, industry-standard JavaScript library for cryptographic operations, ensuring secure and reliable hashing functions.
+
+Other encoding/decoding operations use browser-native functions (Base64, URL encoding, etc.) for maximum compatibility and performance.
 
 ## License
 
