@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberChef Side Panel</title>
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🔐 CyberChef</h1>
+    
+    <div class="form-group">
+      <label for="recipe">Recipe:</label>
+      <select id="recipe">
+        <option value="base64encode">Base64 Encode</option>
+        <option value="base64decode">Base64 Decode</option>
+        <option value="urlEncode">URL Encode</option>
+        <option value="urlDecode">URL Decode</option>
+        <option value="hexEncode">Hex Encode</option>
+        <option value="hexDecode">Hex Decode</option>
+        <option value="rot13">ROT13</option>
+        <option value="reverse">Reverse</option>
+        <option value="toUpperCase">To Upper Case</option>
+        <option value="toLowerCase">To Lower Case</option>
+        <option value="md5">MD5 Hash</option>
+        <option value="sha1">SHA1 Hash</option>
+        <option value="sha256">SHA256 Hash</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Input Mode:</label>
+      <div class="radio-group">
+        <label>
+          <input type="radio" name="inputMode" value="manual" checked>
+          Manual Paste
+        </label>
+        <label>
+          <input type="radio" name="inputMode" value="contextMenu">
+          Right-click Selection
+        </label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="input">Input:</label>
+      <textarea id="input" rows="8" placeholder="Enter or paste your text here, or right-click selected text and choose 'Cyber Cook'"></textarea>
+    </div>
+
+    <button id="cookBtn" class="cook-btn">🍳 Cook</button>
+
+    <div class="form-group">
+      <label for="output">Output:</label>
+      <textarea id="output" rows="8" readonly placeholder="Output will appear here"></textarea>
+    </div>
+  </div>
+
+  <script src="crypto-js.js"></script>
+  <script src="sidepanel.js"></script>
+</body>
+</html>
