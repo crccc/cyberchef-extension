@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page for CyberChef Extension</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #667eea;
+        }
+        .test-section {
+            margin: 30px 0;
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 8px;
+        }
+        .test-text {
+            background: #fff;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 4px solid #667eea;
+        }
+        code {
+            background: #e0e0e0;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔐 CyberChef Extension Test Page</h1>
+    
+    <div class="test-section">
+        <h2>Test Base64 Encoding</h2>
+        <p>Select and right-click this text to test Base64 encoding:</p>
+        <div class="test-text">
+            Hello World! This is a test message.
+        </div>
+        <p><strong>Expected Base64:</strong> <code>SGVsbG8gV29ybGQhIFRoaXMgaXMgYSB0ZXN0IG1lc3NhZ2Uu</code></p>
+    </div>
+
+    <div class="test-section">
+        <h2>Test URL Encoding</h2>
+        <p>Select and right-click this text to test URL encoding:</p>
+        <div class="test-text">
+            https://example.com/search?q=hello world&sort=date
+        </div>
+        <p><strong>Expected URL Encoded:</strong> <code>https%3A%2F%2Fexample.com%2Fsearch%3Fq%3Dhello%20world%26sort%3Ddate</code></p>
+    </div>
+
+    <div class="test-section">
+        <h2>Test ROT13</h2>
+        <p>Select and right-click this text to test ROT13:</p>
+        <div class="test-text">
+            The quick brown fox jumps over the lazy dog
+        </div>
+        <p><strong>Expected ROT13:</strong> <code>Gur dhvpx oebja sbk whzcf bire gur ynml qbt</code></p>
+    </div>
+
+    <div class="test-section">
+        <h2>Test Hex Encoding</h2>
+        <p>Select and right-click this text to test Hex encoding:</p>
+        <div class="test-text">
+            ABC123
+        </div>
+        <p><strong>Expected Hex:</strong> <code>414243313233</code></p>
+    </div>
+
+    <div class="test-section">
+        <h2>Instructions</h2>
+        <ol>
+            <li>Install the CyberChef extension from <code>chrome://extensions/</code></li>
+            <li>Click the extension icon to open the side panel</li>
+            <li>Select any text above</li>
+            <li>Right-click and choose "Cyber Cook"</li>
+            <li>Select the appropriate recipe in the side panel</li>
+            <li>Click "🍳 Cook" to see the result</li>
+        </ol>
+    </div>
+</body>
+</html>
