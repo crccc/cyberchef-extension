@@ -33,7 +33,7 @@ const CyberChefOperations = {
       const hex = input.replace(/\s/g, '');
       let result = '';
       for (let i = 0; i < hex.length; i += 2) {
-        result += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
+        result += String.fromCharCode(parseInt(hex.substring(i, i + 2), 16));
       }
       return result;
     } catch (e) {
