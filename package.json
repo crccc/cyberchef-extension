@@ -1,0 +1,21 @@
+{
+  "name": "cyberchef-extension",
+  "version": "1.0.0",
+  "description": "Chrome extension with side panel to use CyberChef for content processing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crccc/cyberchef-extension.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/crccc/cyberchef-extension/issues"
+  },
+  "homepage": "https://github.com/crccc/cyberchef-extension#readme"
+}
